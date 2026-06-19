@@ -125,6 +125,7 @@ SW1 = `1`, SW2 = `0`
 ## Project Structure
 
 Car_Black_Box.X/
+
 ├── main.c              # Main loop, operation state machine
 ├── main.h              # Function prototypes
 ├── dashboard.c         # Dashboard, event store, menu, view/clear/download log
