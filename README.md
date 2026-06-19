@@ -63,14 +63,13 @@ Main Menu
 
 ## Button Map
 -----------------------------------------------------
-| Button |  Dashboard  |    Menu    |    View Log   |
-|--------|-------------|------------|---------------|
-| SW1    | Gear Up     | Scroll Up  | Previous Event|
-| SW2    | Gear Down   | Scroll Down| Next Event    |
-| SW3    | Clutch (GR) |     —      |       —       |
-| SW4    | Enter Menu  | Select     |     —         |
-| SW5    |      —      | Back to    | Back to Menu  |
-|        |               Dashboard  |               |
+| Button |  Dashboard  |    Menu     |    View Log   |
+|--------|-------------|------------ |---------------|
+| SW1    | Gear Up     | Scroll Up   | Previous Event|
+| SW2    | Gear Down   | Scroll Down | Next Event    |
+| SW3    | Clutch (GR) |     —       |       —       |
+| SW4    | Enter Menu  | Select      |     —         |
+| SW5    |      —      | Back to Dash| Back to Menu  |
 -----------------------------------------------------
 
 ## Event Format
