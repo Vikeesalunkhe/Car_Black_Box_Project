@@ -123,17 +123,17 @@ SW1 = `1`, SW2 = `0`
 ---
 
 ## Project Structure
-
-Car_Black_Box.X/
-
-├── main.c              # Main loop, operation state machine
-├── main.h              # Function prototypes
-├── dashboard.c         # Dashboard, event store, menu, view/clear/download log
-├── clcd.c / clcd.h     # 16x2 LCD driver
-├── ds1307.c / ds1307.h # RTC driver
-├── external_eeprom.c   # I2C EEPROM read/write
-├── i2c.c / i2c.h       # I2C driver + Timer ISR
-├── adc.c / adc.h       # ADC driver
-├── uart.c / uart.h     # UART driver
-├── timers.c            # Timer0 init
-└── digital_keypad.c    # Keypad driver
+--------------------------------------------------------------------------------
+Car_Black_Box.X/                                                               |
+├── main.c              # Main loop, operation state machine                   |
+├── main.h              # Function prototypes                                  |
+├── dashboard.c         # Dashboard, event store, menu, view/clear/download log|
+├── clcd.c / clcd.h     # 16x2 LCD driver                                      |
+├── ds1307.c / ds1307.h # RTC driver                                           |
+├── external_eeprom.c   # I2C EEPROM read/write                                |
+├── i2c.c / i2c.h       # I2C driver + Timer ISR                               |
+├── adc.c / adc.h       # ADC driver                                           |
+├── uart.c / uart.h     # UART driver                                          |
+├── timers.c            # Timer0 init                                          |
+└── digital_keypad.c    # Keypad driver                                        |
+-------------------------------------------------------------------------------|
