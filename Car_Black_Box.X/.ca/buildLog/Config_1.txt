@@ -1,0 +1,161 @@
+make -f nbproject/Makefile-Config_1.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+rm -f  -r .ca/build/Config_1/production
+rm -f  -r .ca/dist/Config_1/production
+make[1]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+[32mCLEAN SUCCESSFUL (total time: 203ms)[0m
+make -f nbproject/Makefile-Config_1.mk SUBPROJECTS= .build-conf
+make  -f nbproject/Makefile-Config_1.mk .ca/dist/Config_1/production/Car_Black_Box.X.production.hex
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/main.p1 main.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/digital_keypad.p1 digital_keypad.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/ds1307.p1 ds1307.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/i2c.p1 i2c.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/clcd.p1 clcd.c 
+clcd.c:6:15: warning: implicit conversion loses integer precision: 'unsigned char' to '__bit' [-Wimplicit-int-conversion]
+    6 |     CLCD_RS = mode;
+      |             ~ ^~~~
+clcd.c:13:36: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+   13 |     CLCD_DATA_PORT = (byte & 0x0F) << 4;
+      |                    ~ ~~~~~~~~~~~~~~^~~~
+2 warnings generated.
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/uart.p1 uart.c 
+uart.c:13:34: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned char' [-Wimplicit-int-conversion]
+   13 |     SPBRG = (FOSC / (16 * baud)) - 1;
+      |           ~ ~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/adc.p1 adc.c 
+adc.c:18:30: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+   18 |     ADCON0 = (ADCON0 & 0xC7) | (channel << 3);
+      |            ~ ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+adc.c:25:33: warning: implicit conversion changes signedness: 'int' to 'unsigned short' [-Wsign-conversion]
+   25 |     adc_reg_val = (ADRESH << 8) | ADRESL; // 10bits
+      |                 ~ ~~~~~~~~~~~~~~^~~~~~~~
+2 warnings generated.
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/dashboard.p1 dashboard.c 
+dashboard.c:56:38: warning: implicit conversion turns floating-point number into integer: 'double' to 'unsigned char' [-Wfloat-conversion]
+   56 |         adc_val = read_adc(CHANNEL0) / 10.23;
+      |                 ~ ~~~~~~~~~~~~~~~~~~~^~~~~~~
+dashboard.c:60:20: warning: passing 'unsigned char[3]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   60 |         clcd_print(speed, LINE2(14));
+      |                    ^~~~~
+./clcd.h:35:29: note: passing argument to parameter 'str' here
+   35 | void clcd_print(const char *str, unsigned char addr);
+      |                             ^
+dashboard.c:106:57: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  106 |         clcd_print("                ", LINE2(field_index+1));
+      |         ~~~~~~~~~~                     ~~~~~~~~~~~~~~~~~^~~
+./clcd.h:25:45: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~~~^
+dashboard.c:110:29: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  110 |             clcd_putch('_', LINE2(field_index)); 
+      |             ~~~~~~~~~~      ^~~~~~~~~~~~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:114:29: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  114 |             clcd_putch(' ', LINE2(field_index));
+      |             ~~~~~~~~~~      ^~~~~~~~~~~~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:120:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  120 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:127:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  127 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:184:54: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  184 |                     rem_time_sec[0] = (rem_sec / 10) + '0';
+      |                                     ~ ~~~~~~~~~~~~~~~^~~~~
+dashboard.c:190:32: warning: passing 'unsigned char[3]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  190 |                     clcd_print(rem_time_sec, LINE2(5));
+      |                                ^~~~~~~~~~~~
+./clcd.h:35:29: note: passing argument to parameter 'str' here
+   35 | void clcd_print(const char *str, unsigned char addr);
+      |                             ^
+dashboard.c:385:33: warning: implicit conversion loses integer precision: 'unsigned int' to 'char' [-Wimplicit-int-conversion]
+  385 |         EEPROM_data[i][0] = '0' + i;
+      |                           ~ ~~~~^~~
+dashboard.c:462:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  462 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:469:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  469 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:492:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  492 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:499:33: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  499 |                 clcd_putch('*', LINE2(j));
+      |                 ~~~~~~~~~~      ^~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:552:25: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  552 |         clcd_putch('_', LINE2(set_time_filed));
+      |         ~~~~~~~~~~      ^~~~~~~~~~~~~~~~~~~~~
+./clcd.h:25:43: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~^~~
+dashboard.c:553:46: warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  553 |         clcd_putch('_', LINE2(set_time_filed + 1));
+      |         ~~~~~~~~~~      ~~~~~~~~~~~~~~~~~~~~~^~~~
+./clcd.h:25:45: note: expanded from macro 'LINE2'
+   25 | #define LINE2(x)                    (0xC0 + x)
+      |                                      ~~~~~~~^
+dashboard.c:613:54: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  613 |         write_ds1307(HOUR_ADDR, ((time_value/10)<<4) | (time_value % 10));
+      |         ~~~~~~~~~~~~            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+dashboard.c:616:53: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  616 |         write_ds1307(MIN_ADDR, ((time_value/10)<<4) | (time_value % 10));
+      |         ~~~~~~~~~~~~           ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+dashboard.c:619:53: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+  619 |         write_ds1307(SEC_ADDR, ((time_value/10)<<4) | (time_value % 10));
+      |         ~~~~~~~~~~~~           ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+19 warnings generated.
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/external_eeprom.p1 external_eeprom.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_1=Config_1  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_1/production/timers.p1 timers.c 
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+make[2]: Entering directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+"C:\Program Files\Microchip\xc8\v3.10\bin\xc8-cc.exe"  -mcpu=16F877A -Wl,-Map=.ca/dist/Config_1/production/Car_Black_Box.X.production.map  -DXPRJ_Config_1=Config_1  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8"  -O1 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto      -Wl,--memorysummary,.ca/dist/Config_1/production/memoryfile.xml -o .ca/dist/Config_1/production/Car_Black_Box.X.production.elf  .ca/build/Config_1/production/main.p1 .ca/build/Config_1/production/digital_keypad.p1 .ca/build/Config_1/production/clcd.p1 .ca/build/Config_1/production/i2c.p1 .ca/build/Config_1/production/ds1307.p1 .ca/build/Config_1/production/adc.p1 .ca/build/Config_1/production/dashboard.p1 .ca/build/Config_1/production/external_eeprom.p1 .ca/build/Config_1/production/timers.p1 .ca/build/Config_1/production/uart.p1     
+dashboard.c:316:: error: (1250) could not find space (170 bytes) for variable _EEPROM_data
+make[2]: Leaving directory 'C:/Users/Ayush Pharande/MPLABXProjects/MC_Projects/Car_Black_Box.X'
+[31mmake[2]: *** [nbproject/Makefile-Config_1.mk:278: .ca/dist/Config_1/production/Car_Black_Box.X.production.hex] Error 1
+make[1]: *** [nbproject/Makefile-Config_1.mk:85: .build-conf] Error 2
+make: *** [nbproject/Makefile-impl.mk:39: .build-impl] Error 2[0m
+[31mBUILD FAILED (exit value 2, total time: 6s)[0m

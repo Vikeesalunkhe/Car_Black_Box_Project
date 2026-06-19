@@ -1,0 +1,1697 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"35 ./clcd.h
+[v _clcd_print `(v ~T0 @X0 0 ef2`*Cuc`uc ]
+"19 ./ds1307.h
+[v _get_time `(v ~T0 @X0 0 ef1`*uc ]
+"20
+[v _display_time `(v ~T0 @X0 0 ef1`*uc ]
+"20 ./main.h
+[v _store_event `(v ~T0 @X0 0 e? ]
+"13 ./adc.h
+[v _read_adc `(us ~T0 @X0 0 ef1`uc ]
+"65 ./external_eeprom.h
+[v _write_external_eeprom `(v ~T0 @X0 0 ef2`uc`uc ]
+"66 dashboard.c
+[v _time `uc ~T0 @X0 -> 0 `x e ]
+"34 ./clcd.h
+[v _clcd_putch `(v ~T0 @X0 0 ef2`Cuc`uc ]
+"39 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/string.h
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"16 dashboard.c
+[v _operation `uc ~T0 @X0 0 e ]
+"22 ./main.h
+[v _clear_clcd `(v ~T0 @X0 0 e? ]
+"25
+[v _load_logs `(v ~T0 @X0 0 e? ]
+"66 ./external_eeprom.h
+[v _read_external_eeprom `(uc ~T0 @X0 0 ef1`uc ]
+"9 ./uart.h
+[v _puts `(v ~T0 @X0 0 ef1`*Cuc ]
+"33 C:\Program Files\Microchip\xc8\v3.10\pic\include\c99/string.h
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"18 ./ds1307.h
+[v _write_ds1307 `(v ~T0 @X0 0 ef2`uc`uc ]
+"54 C:/Users/Ayush Pharande/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f877a.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"218
+[; <" PORTB equ 06h ;# ">
+"280
+[; <" PORTC equ 07h ;# ">
+"342
+[; <" PORTD equ 08h ;# ">
+"404
+[; <" PORTE equ 09h ;# ">
+"436
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; <" T1CON equ 010h ;# ">
+"732
+[; <" TMR2 equ 011h ;# ">
+"739
+[; <" T2CON equ 012h ;# ">
+"810
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; <" SSPCON equ 014h ;# ">
+"887
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; <" TXREG equ 019h ;# ">
+"1068
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; <" TRISA equ 085h ;# ">
+"1377
+[; <" TRISB equ 086h ;# ">
+"1439
+[; <" TRISC equ 087h ;# ">
+"1501
+[; <" TRISD equ 088h ;# ">
+"1563
+[; <" TRISE equ 089h ;# ">
+"1620
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; <" PR2 equ 092h ;# ">
+"1825
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; <" EECON2 equ 018Dh ;# ">
+"11 dashboard.c
+[v _clock_reg `uc ~T0 @X0 -> 3 `i e ]
+[v _speed `uc ~T0 @X0 -> 3 `i e ]
+[i _speed
+:U ..
+-> -> 0 `i `uc
+..
+]
+"12
+[v _event `*uc ~T0 @X0 -> 8 `i e ]
+[i _event
+:U ..
+:s 1C
+:s 2C
+:s 3C
+:s 4C
+:s 5C
+:s 6C
+:s 7C
+:s 8C
+..
+]
+"13
+[v _pos `uc ~T0 @X0 1 e ]
+[i _pos
+-> -> 0 `i `uc
+]
+"14
+[v _adc_val `uc ~T0 @X0 1 e ]
+"20
+[v _dashboard `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _dashboard ]
+[v _key `uc ~T0 @X0 1 r1 ]
+[f ]
+"21
+[e ( _clcd_print (2 , :s 9C -> + -> 128 `i -> 0 `i `uc ]
+"24
+[e ( _get_time (1 &U _clock_reg ]
+"25
+[e ( _display_time (1 &U _clock_reg ]
+"28
+[e $ ! == -> _key `i -> 62 `i 101  ]
+"29
+{
+"30
+[e $ ! == -> _pos `i -> 7 `i 102  ]
+{
+"31
+[e = _pos -> -> 1 `i `uc ]
+"32
+}
+[e :U 102 ]
+"33
+[e $ ! < -> _pos `i -> 6 `i 103  ]
+{
+"34
+[e ++ _pos -> -> 1 `i `uc ]
+"35
+}
+[e :U 103 ]
+"36
+[e ( _store_event ..  ]
+"37
+}
+[e $U 104  ]
+"38
+[e :U 101 ]
+[e $ ! == -> _key `i -> 61 `i 105  ]
+"39
+{
+"40
+[e $ ! == -> _pos `i -> 7 `i 106  ]
+{
+"41
+[e = _pos -> -> 1 `i `uc ]
+"42
+}
+[e :U 106 ]
+"43
+[e $ ! > -> _pos `i -> 1 `i 107  ]
+{
+"44
+[e -- _pos -> -> 1 `i `uc ]
+"45
+}
+[e :U 107 ]
+"46
+[e ( _store_event ..  ]
+"47
+}
+[e $U 108  ]
+"48
+[e :U 105 ]
+[e $ ! == -> _key `i -> 59 `i 109  ]
+"49
+{
+"50
+[e = _pos -> -> 7 `i `uc ]
+"51
+[e ( _store_event ..  ]
+"52
+}
+[e :U 109 ]
+[e :U 108 ]
+[e :U 104 ]
+"53
+[e ( _clcd_print (2 , -> *U + &U _event * -> _pos `ux -> -> # *U &U _event `ui `ux `*Cuc -> + -> 192 `i -> 10 `i `uc ]
+"56
+[e = _adc_val -> / -> -> ( _read_adc (1 -> -> 0 `i `uc `ui `d .10.23 `uc ]
+"57
+[e = *U + &U _speed * -> -> -> 0 `i `ui `ux -> -> # *U &U _speed `ui `ux -> + -> / -> _adc_val `i -> 10 `i `ui -> 48 `ui `uc ]
+"58
+[e = *U + &U _speed * -> -> -> 1 `i `ui `ux -> -> # *U &U _speed `ui `ux -> + -> % -> _adc_val `i -> 10 `i `ui -> 48 `ui `uc ]
+"59
+[e = *U + &U _speed * -> -> -> 2 `i `ui `ux -> -> # *U &U _speed `ui `ux -> -> 0 `ui `uc ]
+"60
+[e ( _clcd_print (2 , -> &U _speed `*Cuc -> + -> 192 `i -> 14 `i `uc ]
+"61
+[e :UE 100 ]
+}
+"64
+[v _event_count `uc ~T0 @X0 1 e ]
+[i _event_count
+-> -> 0 `i `uc
+]
+"65
+[v _address `uc ~T0 @X0 1 e ]
+[i _address
+-> -> 0 `i `uc
+]
+"67
+[v _store_event `(v ~T0 @X0 1 ef ]
+"68
+{
+[e :U _store_event ]
+[f ]
+"70
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 111  ]
+[e $U 112  ]
+[e :U 111 ]
+{
+"72
+[e $ ! || == _i -> 2 `i == _i -> 5 `i 114  ]
+"73
+{
+"74
+[e $U 113  ]
+"75
+}
+[e :U 114 ]
+"76
+[e ( _write_external_eeprom (2 , ++ _address -> -> 1 `i `uc -> *U + &U _time * -> -> _i `ui `ux -> -> # *U &U _time `ui `ux `uc ]
+"77
+}
+[e :U 113 ]
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 111  ]
+[e :U 112 ]
+}
+"79
+[e ( _write_external_eeprom (2 , ++ _address -> -> 1 `i `uc -> *U + *U + &U _event * -> _pos `ux -> -> # *U &U _event `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U *U + &U _event * -> _pos `ux -> -> # *U &U _event `ui `ux `ui `ux `uc ]
+"80
+[e ( _write_external_eeprom (2 , ++ _address -> -> 1 `i `uc -> *U + *U + &U _event * -> _pos `ux -> -> # *U &U _event `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U *U + &U _event * -> _pos `ux -> -> # *U &U _event `ui `ux `ui `ux `uc ]
+"82
+[e ( _write_external_eeprom (2 , ++ _address -> -> 1 `i `uc *U + &U _speed * -> -> -> 0 `i `ui `ux -> -> # *U &U _speed `ui `ux ]
+"83
+[e ( _write_external_eeprom (2 , ++ _address -> -> 1 `i `uc *U + &U _speed * -> -> -> 1 `i `ui `ux -> -> # *U &U _speed `ui `ux ]
+"85
+[e $ ! > -> _address `i -> 99 `i 115  ]
+{
+"86
+[e = _address -> -> 0 `i `uc ]
+"87
+}
+[e :U 115 ]
+"89
+[e $ ! < -> _event_count `i -> 10 `i 116  ]
+"90
+[e ++ _event_count -> -> 1 `i `uc ]
+[e :U 116 ]
+"91
+[e :UE 110 ]
+}
+"93
+[v _sec `ui ~T0 @X0 1 e ]
+"94
+[v _field_index `ui ~T0 @X0 1 e ]
+[i _field_index
+-> -> 0 `i `ui
+]
+[v _TOTAl_ATTEMPTs `ui ~T0 @X0 1 e ]
+[i _TOTAl_ATTEMPTs
+-> -> 3 `i `ui
+]
+[v _attempt `ui ~T0 @X0 1 e ]
+[i _attempt
+-> -> 0 `i `ui
+]
+"95
+[v _delay `ul ~T0 @X0 1 e ]
+[i _delay
+-> -> -> 0 `i `l `ul
+]
+"96
+[v _Pass `uc ~T0 @X0 -> 5 `i e ]
+[i _Pass
+:U ..
+-> 49 `c
+-> 49 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"97
+[v _userPass `uc ~T0 @X0 -> 5 `i e ]
+"98
+[v _rem_time_sec `uc ~T0 @X0 -> 3 `i e ]
+[i _rem_time_sec
+:U ..
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"99
+[v _block_start_sec `ui ~T0 @X0 1 e ]
+[i _block_start_sec
+-> -> 0 `i `ui
+]
+"100
+[v _blocked `uc ~T0 @X0 1 e ]
+[i _blocked
+-> -> 0 `i `uc
+]
+"101
+[v _login_screen `(v ~T0 @X0 1 ef1`uc ]
+"102
+{
+[e :U _login_screen ]
+"101
+[v _key `uc ~T0 @X0 1 r1 ]
+"102
+[f ]
+"103
+[e $ ! < _field_index -> -> 4 `i `ui 118  ]
+"104
+{
+"105
+[e ( _clcd_print (2 , :s 10C -> + -> 128 `i -> 0 `i `uc ]
+"106
+[e ( _clcd_print (2 , :s 11C -> + + -> -> 192 `i `ui _field_index -> -> 1 `i `ui `uc ]
+"108
+[e $ ! == % _sec -> -> 2 `i `ui -> -> 0 `i `ui 119  ]
+"109
+{
+"110
+[e ( _clcd_putch (2 , -> -> 95 `ui `uc -> + -> -> 192 `i `ui _field_index `uc ]
+"111
+}
+[e $U 120  ]
+"112
+[e :U 119 ]
+"113
+{
+"114
+[e ( _clcd_putch (2 , -> -> 32 `ui `uc -> + -> -> 192 `i `ui _field_index `uc ]
+"115
+}
+[e :U 120 ]
+"117
+[e $ ! == -> _key `i -> 62 `i 121  ]
+{
+"118
+[e = *U + &U _userPass * -> _field_index `ux -> -> # *U &U _userPass `ui `ux -> -> 49 `ui `uc ]
+"119
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 125  ]
+[e :U 122 ]
+{
+"120
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"121
+}
+[e ++ _j -> 1 `i ]
+[e :U 125 ]
+[e $ < -> _j `ui + _field_index -> -> 1 `i `ui 122  ]
+[e :U 123 ]
+}
+"122
+[e ++ _field_index -> -> 1 `i `ui ]
+"123
+}
+[e $U 126  ]
+"124
+[e :U 121 ]
+[e $ ! == -> _key `i -> 61 `i 127  ]
+{
+"125
+[e = *U + &U _userPass * -> _field_index `ux -> -> # *U &U _userPass `ui `ux -> -> 48 `ui `uc ]
+"126
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 131  ]
+[e :U 128 ]
+{
+"127
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"128
+}
+[e ++ _j -> 1 `i ]
+[e :U 131 ]
+[e $ < -> _j `ui + _field_index -> -> 1 `i `ui 128  ]
+[e :U 129 ]
+}
+"129
+[e ++ _field_index -> -> 1 `i `ui ]
+"130
+}
+[e :U 127 ]
+[e :U 126 ]
+"132
+}
+[e $U 132  ]
+"133
+[e :U 118 ]
+"134
+{
+"135
+[e ++ _attempt -> -> 1 `i `ui ]
+"137
+[e = *U + &U _userPass * -> -> -> 4 `i `ui `ux -> -> # *U &U _userPass `ui `ux -> -> 0 `ui `uc ]
+"138
+[e $ ! ! != ( _strcmp (2 , -> &U _Pass `*Cuc -> &U _userPass `*Cuc -> 0 `i 133  ]
+{
+"139
+[e ( _clcd_print (2 , :s 12C -> + -> 128 `i -> 0 `i `uc ]
+"140
+[e ( _clcd_print (2 , :s 13C -> + -> 192 `i -> 0 `i `uc ]
+"141
+[e = _operation -> -> 2 `i `uc ]
+"142
+[e ( _clear_clcd ..  ]
+"144
+}
+[e $U 134  ]
+"145
+[e :U 133 ]
+"146
+{
+"147
+[e $ ! < _attempt _TOTAl_ATTEMPTs 135  ]
+"148
+{
+"149
+[e ( _clcd_print (2 , :s 14C -> + -> 128 `i -> 0 `i `uc ]
+"151
+[e $U 137  ]
+{
+"153
+[e :U 138 ]
+"154
+[e ( _clcd_print (2 , :s 15C -> + -> 192 `i -> 0 `i `uc ]
+"155
+[e $U 136  ]
+"156
+[e :U 139 ]
+"157
+[e ( _clcd_print (2 , :s 16C -> + -> 192 `i -> 0 `i `uc ]
+"158
+[e $U 136  ]
+"159
+[e :U 140 ]
+"160
+[e ( _clcd_print (2 , :s 17C -> + -> 192 `i -> 0 `i `uc ]
+"161
+[e $U 136  ]
+"163
+}
+[e $U 136  ]
+[e :U 137 ]
+[e [\ _attempt , $ -> -> 1 `i `ui 138
+ , $ -> -> 2 `i `ui 139
+ , $ -> -> 3 `i `ui 140
+ 136 ]
+[e :U 136 ]
+"164
+{
+[e = _delay -> -> -> 0 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 141  ]
+[e $U 142  ]
+[e :U 141 ]
+[e ++ _delay -> -> -> 1 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 141  ]
+[e :U 142 ]
+}
+"165
+[e = _delay -> -> -> 0 `i `l `ul ]
+"166
+[e = _field_index -> -> 0 `i `ui ]
+"167
+[e ( _clear_clcd ..  ]
+"169
+}
+[e $U 144  ]
+"170
+[e :U 135 ]
+[e $ ! && >= _attempt _TOTAl_ATTEMPTs == -> _blocked `i -> 0 `i 145  ]
+"171
+{
+"172
+[e = _blocked -> -> 1 `i `uc ]
+"173
+[e = _block_start_sec _sec ]
+"175
+}
+[e :U 145 ]
+[e :U 144 ]
+"177
+[e $ ! != -> _blocked `i -> 0 `i 146  ]
+"178
+{
+"179
+[v _elapsed `ui ~T0 @X0 1 a ]
+[e = _elapsed - _sec _block_start_sec ]
+"181
+[e $ ! < _elapsed -> -> 30 `i `ui 147  ]
+{
+"183
+[v _rem_sec `ui ~T0 @X0 1 a ]
+[e = _rem_sec - -> -> 29 `i `ui _elapsed ]
+"184
+[e = *U + &U _rem_time_sec * -> -> -> 0 `i `ui `ux -> -> # *U &U _rem_time_sec `ui `ux -> + / _rem_sec -> -> 10 `i `ui -> 48 `ui `uc ]
+"185
+[e = *U + &U _rem_time_sec * -> -> -> 1 `i `ui `ux -> -> # *U &U _rem_time_sec `ui `ux -> + % _rem_sec -> -> 10 `i `ui -> 48 `ui `uc ]
+"186
+[e = *U + &U _rem_time_sec * -> -> -> 2 `i `ui `ux -> -> # *U &U _rem_time_sec `ui `ux -> -> 0 `ui `uc ]
+"188
+[e ( _clcd_print (2 , :s 18C -> + -> 128 `i -> 0 `i `uc ]
+"189
+[e ( _clcd_print (2 , :s 19C -> + -> 192 `i -> 0 `i `uc ]
+"190
+[e ( _clcd_print (2 , -> &U _rem_time_sec `*Cuc -> + -> 192 `i -> 5 `i `uc ]
+"191
+[e ( _clcd_print (2 , :s 20C -> + -> 192 `i -> 7 `i `uc ]
+"192
+}
+[e $U 148  ]
+"193
+[e :U 147 ]
+{
+"195
+[e = _blocked -> -> 0 `i `uc ]
+"196
+[e = _attempt -> -> 0 `i `ui ]
+"197
+[e = _field_index -> -> 0 `i `ui ]
+"198
+[e = _operation -> -> 0 `i `uc ]
+"199
+[e = _pos -> -> 0 `i `uc ]
+"200
+[e ( _clear_clcd ..  ]
+"203
+}
+[e :U 148 ]
+"204
+}
+[e :U 146 ]
+"206
+}
+[e :U 134 ]
+"207
+}
+[e :U 132 ]
+"208
+[e :UE 117 ]
+}
+"211
+[v _clear_clcd `(v ~T0 @X0 1 ef ]
+"212
+{
+[e :U _clear_clcd ]
+[f ]
+"213
+[e ( _clcd_print (2 , :s 21C -> + -> 128 `i -> 0 `i `uc ]
+"214
+[e ( _clcd_print (2 , :s 22C -> + -> 192 `i -> 0 `i `uc ]
+"215
+[e :UE 149 ]
+}
+[v F1241 `Cuc ~T0 @X0 -> 17 `i t ]
+"220
+[v _menu `F1241 ~T0 @X0 -> 5 `i e ]
+[i _menu
+:U ..
+:U ..
+-> 86 `c
+-> 105 `c
+-> 101 `c
+-> 119 `c
+-> 32 `c
+-> 76 `c
+-> 111 `c
+-> 103 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+:U ..
+-> 67 `c
+-> 108 `c
+-> 101 `c
+-> 97 `c
+-> 114 `c
+-> 32 `c
+-> 76 `c
+-> 111 `c
+-> 103 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+..
+:U ..
+-> 68 `c
+-> 111 `c
+-> 119 `c
+-> 110 `c
+-> 108 `c
+-> 111 `c
+-> 97 `c
+-> 100 `c
+-> 32 `c
+-> 76 `c
+-> 111 `c
+-> 103 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+:U ..
+-> 83 `c
+-> 101 `c
+-> 116 `c
+-> 32 `c
+-> 84 `c
+-> 105 `c
+-> 109 `c
+-> 101 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+:U ..
+-> 67 `c
+-> 104 `c
+-> 97 `c
+-> 110 `c
+-> 103 `c
+-> 101 `c
+-> 32 `c
+-> 80 `c
+-> 97 `c
+-> 115 `c
+-> 115 `c
+-> 119 `c
+-> 111 `c
+-> 114 `c
+-> 100 `c
+-> 32 `c
+-> 0 `c
+..
+..
+]
+"221
+[v _menu_index `uc ~T0 @X0 1 e ]
+[i _menu_index
+-> -> 0 `i `uc
+]
+"222
+[v _cursor `uc ~T0 @X0 1 e ]
+[i _cursor
+-> -> 0 `i `uc
+]
+"223
+[v _MENU_COUNT `uc ~T0 @X0 1 e ]
+[i _MENU_COUNT
+-> -> 5 `i `uc
+]
+"225
+[v _display_menu `(v ~T0 @X0 1 ef1`uc ]
+"226
+{
+[e :U _display_menu ]
+"225
+[v _key `uc ~T0 @X0 1 r1 ]
+"226
+[f ]
+"228
+[e $ ! == -> _key `i -> 61 `i 151  ]
+"229
+{
+"230
+[e $ ! == -> _cursor `i -> 0 `i 152  ]
+"231
+{
+"232
+[e = _cursor -> -> 1 `i `uc ]
+"233
+}
+[e $U 153  ]
+"234
+[e :U 152 ]
+"235
+{
+"236
+[e $ ! < -> _menu_index `i - -> _MENU_COUNT `i -> 2 `i 154  ]
+"237
+{
+"238
+[e ++ _menu_index -> -> 1 `i `uc ]
+"239
+}
+[e :U 154 ]
+"240
+}
+[e :U 153 ]
+"241
+}
+[e :U 151 ]
+"243
+[e $ ! == -> _key `i -> 62 `i 155  ]
+"244
+{
+"245
+[e $ ! == -> _cursor `i -> 1 `i 156  ]
+"246
+{
+"247
+[e = _cursor -> -> 0 `i `uc ]
+"248
+}
+[e $U 157  ]
+"249
+[e :U 156 ]
+"250
+{
+"251
+[e $ ! > -> _menu_index `i -> 0 `i 158  ]
+"252
+{
+"253
+[e -- _menu_index -> -> 1 `i `uc ]
+"254
+}
+[e :U 158 ]
+"255
+}
+[e :U 157 ]
+"256
+}
+[e :U 155 ]
+"259
+[e ( _clcd_print (2 , &U *U + &U _menu * -> _menu_index `ux -> * -> # *U &U *U &U _menu `ui -> -> 17 `i `ui `ux -> + -> 128 `i -> 2 `i `uc ]
+"261
+[e $ ! < + -> _menu_index `i -> 1 `i -> _MENU_COUNT `i 159  ]
+"262
+[e ( _clcd_print (2 , &U *U + &U _menu * -> -> + -> _menu_index `i -> 1 `i `ui `ux -> * -> # *U &U *U &U _menu `ui -> -> 17 `i `ui `ux -> + -> 192 `i -> 2 `i `uc ]
+[e :U 159 ]
+"264
+[e $ ! == -> _cursor `i -> 0 `i 160  ]
+"265
+{
+"266
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 128 `i -> 0 `i `uc ]
+"267
+[e ( _clcd_putch (2 , -> -> 32 `ui `uc -> + -> 192 `i -> 0 `i `uc ]
+"268
+}
+[e $U 161  ]
+"269
+[e :U 160 ]
+"270
+{
+"271
+[e ( _clcd_putch (2 , -> -> 32 `ui `uc -> + -> 128 `i -> 0 `i `uc ]
+"272
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i -> 0 `i `uc ]
+"273
+}
+[e :U 161 ]
+"277
+[e $ ! == -> _key `i -> 55 `i 162  ]
+"278
+{
+"280
+[e $U 164  ]
+"281
+{
+"282
+[e :U 165 ]
+"283
+[e = _operation -> -> 3 `i `uc ]
+"284
+[e $U 163  ]
+"286
+[e :U 166 ]
+"287
+[e = _operation -> -> 4 `i `uc ]
+"288
+[e $U 163  ]
+"290
+[e :U 167 ]
+"291
+[e = _operation -> -> 5 `i `uc ]
+"292
+[e $U 163  ]
+"294
+[e :U 168 ]
+"295
+[e = _operation -> -> 6 `i `uc ]
+"296
+[e $U 163  ]
+"298
+[e :U 169 ]
+"299
+[e = _operation -> -> 7 `i `uc ]
+"300
+[e $U 163  ]
+"301
+}
+[e $U 163  ]
+[e :U 164 ]
+[e [\ + -> _menu_index `i -> _cursor `i , $ -> 0 `i 165
+ , $ -> 1 `i 166
+ , $ -> 2 `i 167
+ , $ -> 3 `i 168
+ , $ -> 4 `i 169
+ 163 ]
+[e :U 163 ]
+"302
+}
+[e :U 162 ]
+"304
+[e $ ! == -> _key `i -> 47 `i 170  ]
+{
+"305
+[e = _operation -> -> 0 `i `uc ]
+"306
+[e = _menu_index -> -> 0 `i `uc ]
+"307
+[e = _cursor -> -> 0 `i `uc ]
+"308
+[e ( _clear_clcd ..  ]
+"310
+}
+[e :U 170 ]
+"311
+[e :UE 150 ]
+}
+[v F1250 `uc ~T0 @X0 -> 17 `i t ]
+"316
+[v _EEPROM_data `F1250 ~T0 @X0 -> 10 `i e ]
+"317
+[v _log_index `ui ~T0 @X0 1 e ]
+[i _log_index
+-> -> 0 `i `ui
+]
+"318
+[v _log_loaded `uc ~T0 @X0 1 e ]
+[i _log_loaded
+-> -> 0 `i `uc
+]
+"319
+[v _view_log `(v ~T0 @X0 1 ef1`uc ]
+"320
+{
+[e :U _view_log ]
+"319
+[v _key `uc ~T0 @X0 1 r1 ]
+"320
+[f ]
+"321
+[e $ ! ! != -> _log_loaded `i -> 0 `i 172  ]
+"322
+{
+"323
+[e ( _load_logs ..  ]
+"324
+[e = _log_loaded -> -> 1 `i `uc ]
+"325
+}
+[e :U 172 ]
+"327
+[e $ ! == -> _key `i -> 61 `i 173  ]
+"328
+{
+"329
+[e $ ! && > -> _event_count `i -> 0 `i < _log_index -> - -> _event_count `i -> 1 `i `ui 174  ]
+"330
+{
+"331
+[e ++ _log_index -> -> 1 `i `ui ]
+"332
+}
+[e :U 174 ]
+"333
+}
+[e $U 175  ]
+"334
+[e :U 173 ]
+[e $ ! == -> _key `i -> 62 `i 176  ]
+"335
+{
+"336
+[e $ ! > _log_index -> -> 0 `i `ui 177  ]
+"337
+{
+"338
+[e -- _log_index -> -> 1 `i `ui ]
+"339
+}
+[e :U 177 ]
+"340
+}
+[e $U 178  ]
+"341
+[e :U 176 ]
+[e $ ! == -> _key `i -> 47 `i 179  ]
+"342
+{
+"343
+[e = _log_index -> -> 0 `i `ui ]
+"344
+[e = _log_loaded -> -> 0 `i `uc ]
+"345
+[e = _operation -> -> 2 `i `uc ]
+"346
+[e $UE 171  ]
+"347
+}
+[e :U 179 ]
+[e :U 178 ]
+[e :U 175 ]
+"349
+[e ( _clcd_print (2 , :s 23C -> + -> 128 `i -> 0 `i `uc ]
+"350
+[e $ ! == -> _event_count `i -> 0 `i 180  ]
+"351
+{
+"352
+[e ( _clcd_print (2 , :s 24C -> + -> 192 `i -> 0 `i `uc ]
+"353
+}
+[e $U 181  ]
+"354
+[e :U 180 ]
+"355
+{
+"356
+[e $ ! >= _log_index -> _event_count `ui 182  ]
+[e = _log_index -> -> 0 `i `ui ]
+[e :U 182 ]
+"357
+[e ( _clcd_print (2 , -> &U *U + &U _EEPROM_data * -> _log_index `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `*Cuc -> + -> 192 `i -> 0 `i `uc ]
+"358
+}
+[e :U 181 ]
+"359
+[e :UE 171 ]
+}
+"363
+[v _clear_log `(v ~T0 @X0 1 ef ]
+{
+[e :U _clear_log ]
+[f ]
+"364
+[e = _event_count -> -> 0 `i `uc ]
+"365
+[e = _address -> -> 0 `i `uc ]
+"366
+[e = _log_index -> -> 0 `i `ui ]
+"367
+[e = _log_loaded -> -> 0 `i `uc ]
+"368
+[e ( _clcd_print (2 , :s 25C -> + -> 128 `i -> 0 `i `uc ]
+"369
+[e ( _clcd_print (2 , :s 26C -> + -> 192 `i -> 0 `i `uc ]
+"370
+{
+[e = _delay -> -> -> 0 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 184  ]
+[e $U 185  ]
+[e :U 184 ]
+[e ++ _delay -> -> -> 1 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 184  ]
+[e :U 185 ]
+}
+"371
+[e = _delay -> -> -> 0 `i `l `ul ]
+"372
+[e = _operation -> -> 2 `i `uc ]
+"373
+[e ( _clear_clcd ..  ]
+"374
+[e :UE 183 ]
+}
+"379
+[v _load_logs `(v ~T0 @X0 1 ef ]
+"380
+{
+[e :U _load_logs ]
+[f ]
+"381
+[v _load_address `uc ~T0 @X0 1 a ]
+[e = _load_address -> -> 0 `i `uc ]
+"383
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `ui ]
+[e $U 191  ]
+[e :U 188 ]
+"384
+{
+"385
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> + -> 48 `ui _i `uc ]
+"386
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 32 `ui `uc ]
+"388
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"389
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"390
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 58 `ui `uc ]
+"391
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 5 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"392
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 6 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"393
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 7 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 58 `ui `uc ]
+"394
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 8 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"395
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 9 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"397
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 10 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 32 `ui `uc ]
+"399
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 11 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"400
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 12 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"402
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 13 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 32 `ui `uc ]
+"404
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 14 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"405
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 15 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> ( _read_external_eeprom (1 ++ _load_address -> -> 1 `i `uc `uc ]
+"407
+[e = *U + &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux * -> -> -> 16 `i `ui `ux -> -> # *U &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `ui `ux -> -> 0 `ui `uc ]
+"409
+[e $ ! > -> _load_address `i -> 99 `i 192  ]
+{
+"410
+[e = _load_address -> -> 0 `i `uc ]
+"411
+}
+[e :U 192 ]
+"412
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 191 ]
+[e $ < _i -> _event_count `ui 188  ]
+[e :U 189 ]
+}
+"413
+[e :UE 187 ]
+}
+"417
+[v _download_log `(v ~T0 @X0 1 ef1`uc ]
+"418
+{
+[e :U _download_log ]
+"417
+[v _key `uc ~T0 @X0 1 r1 ]
+"418
+[f ]
+"419
+[e ( _clcd_print (2 , :s 27C -> + -> 128 `i -> 0 `i `uc ]
+"420
+[e ( _clcd_print (2 , :s 28C -> + -> 192 `i -> 0 `i `uc ]
+"421
+[e ( _load_logs ..  ]
+"422
+[e ( _puts (1 :s 29C ]
+"423
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 197  ]
+[e :U 194 ]
+{
+"425
+[e ( _puts (1 -> &U *U + &U _EEPROM_data * -> _i `ux -> * -> # *U &U *U &U _EEPROM_data `ui -> -> 17 `i `ui `ux `*Cuc ]
+"426
+[e ( _puts (1 :s 30C ]
+"427
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 197 ]
+[e $ < -> _i `i -> _event_count `i 194  ]
+[e :U 195 ]
+}
+"429
+{
+[e = _delay -> -> -> 0 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 198  ]
+[e $U 199  ]
+[e :U 198 ]
+[e ++ _delay -> -> -> 1 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 198  ]
+[e :U 199 ]
+}
+"430
+[e = _delay -> -> -> 0 `i `l `ul ]
+"432
+[e = _operation -> -> 2 `i `uc ]
+"433
+[e ( _clear_clcd ..  ]
+"435
+[e :UE 193 ]
+}
+"439
+[v _temp_pass `uc ~T0 @X0 -> 5 `i e ]
+"440
+[v _temp1_pass `uc ~T0 @X0 -> 5 `i e ]
+"441
+[v _new_pass_index `uc ~T0 @X0 1 e ]
+[i _new_pass_index
+-> -> 0 `i `uc
+]
+[v _new_pass_index1 `uc ~T0 @X0 1 e ]
+[i _new_pass_index1
+-> -> 0 `i `uc
+]
+"443
+[v _change_password `(v ~T0 @X0 1 ef1`uc ]
+"444
+{
+[e :U _change_password ]
+"443
+[v _key `uc ~T0 @X0 1 r1 ]
+"444
+[f ]
+"445
+[e $ ! < -> _new_pass_index `i -> 4 `i 202  ]
+"446
+{
+"447
+[e ( _clcd_print (2 , :s 31C -> + -> 128 `i -> 0 `i `uc ]
+"448
+[e ( _clcd_print (2 , :s 32C -> + + -> 192 `i -> _new_pass_index `i -> 1 `i `uc ]
+"450
+[e $ ! == % _sec -> -> 2 `i `ui -> -> 0 `i `ui 203  ]
+"451
+{
+"452
+[e ( _clcd_putch (2 , -> -> 95 `ui `uc -> + -> 192 `i -> _new_pass_index `i `uc ]
+"453
+}
+[e $U 204  ]
+"454
+[e :U 203 ]
+"455
+{
+"456
+[e ( _clcd_putch (2 , -> -> 32 `ui `uc -> + -> 192 `i -> _new_pass_index `i `uc ]
+"457
+}
+[e :U 204 ]
+"459
+[e $ ! == -> _key `i -> 62 `i 205  ]
+{
+"460
+[e = *U + &U _temp_pass * -> _new_pass_index `ux -> -> # *U &U _temp_pass `ui `ux -> -> 49 `ui `uc ]
+"461
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 209  ]
+[e :U 206 ]
+{
+"462
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"463
+}
+[e ++ _j -> 1 `i ]
+[e :U 209 ]
+[e $ < _j + -> _new_pass_index `i -> 1 `i 206  ]
+[e :U 207 ]
+}
+"464
+[e ++ _new_pass_index -> -> 1 `i `uc ]
+"465
+}
+[e $U 210  ]
+"466
+[e :U 205 ]
+[e $ ! == -> _key `i -> 61 `i 211  ]
+{
+"467
+[e = *U + &U _temp_pass * -> _new_pass_index `ux -> -> # *U &U _temp_pass `ui `ux -> -> 48 `ui `uc ]
+"468
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 215  ]
+[e :U 212 ]
+{
+"469
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"470
+}
+[e ++ _j -> 1 `i ]
+[e :U 215 ]
+[e $ < _j + -> _new_pass_index `i -> 1 `i 212  ]
+[e :U 213 ]
+}
+"471
+[e ++ _new_pass_index -> -> 1 `i `uc ]
+"472
+}
+[e :U 211 ]
+[e :U 210 ]
+"474
+}
+[e $U 216  ]
+"475
+[e :U 202 ]
+[e $ ! < -> _new_pass_index1 `i -> 4 `i 217  ]
+"476
+{
+"477
+[e ( _clcd_print (2 , :s 33C -> + -> 128 `i -> 0 `i `uc ]
+"478
+[e ( _clcd_print (2 , :s 34C -> + + -> 192 `i -> _new_pass_index1 `i -> 1 `i `uc ]
+"480
+[e $ ! == % _sec -> -> 2 `i `ui -> -> 0 `i `ui 218  ]
+"481
+{
+"482
+[e ( _clcd_putch (2 , -> -> 95 `ui `uc -> + -> 192 `i -> _new_pass_index1 `i `uc ]
+"483
+}
+[e $U 219  ]
+"484
+[e :U 218 ]
+"485
+{
+"486
+[e ( _clcd_putch (2 , -> -> 32 `ui `uc -> + -> 192 `i -> _new_pass_index1 `i `uc ]
+"487
+}
+[e :U 219 ]
+"489
+[e $ ! == -> _key `i -> 62 `i 220  ]
+{
+"490
+[e = *U + &U _temp1_pass * -> _new_pass_index1 `ux -> -> # *U &U _temp1_pass `ui `ux -> -> 49 `ui `uc ]
+"491
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 224  ]
+[e :U 221 ]
+{
+"492
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"493
+}
+[e ++ _j -> 1 `i ]
+[e :U 224 ]
+[e $ < _j + -> _new_pass_index1 `i -> 1 `i 221  ]
+[e :U 222 ]
+}
+"494
+[e ++ _new_pass_index1 -> -> 1 `i `uc ]
+"495
+}
+[e $U 225  ]
+"496
+[e :U 220 ]
+[e $ ! == -> _key `i -> 61 `i 226  ]
+{
+"497
+[e = *U + &U _temp1_pass * -> _new_pass_index1 `ux -> -> # *U &U _temp1_pass `ui `ux -> -> 48 `ui `uc ]
+"498
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 230  ]
+[e :U 227 ]
+{
+"499
+[e ( _clcd_putch (2 , -> -> 42 `ui `uc -> + -> 192 `i _j `uc ]
+"500
+}
+[e ++ _j -> 1 `i ]
+[e :U 230 ]
+[e $ < _j + -> _new_pass_index1 `i -> 1 `i 227  ]
+[e :U 228 ]
+}
+"501
+[e ++ _new_pass_index1 -> -> 1 `i `uc ]
+"502
+}
+[e :U 226 ]
+[e :U 225 ]
+"503
+}
+[e $U 231  ]
+"504
+[e :U 217 ]
+"505
+{
+"507
+[e = *U + &U _temp_pass * -> -> -> 4 `i `ui `ux -> -> # *U &U _temp_pass `ui `ux -> -> 0 `ui `uc ]
+"508
+[e = *U + &U _temp1_pass * -> -> -> 4 `i `ui `ux -> -> # *U &U _temp1_pass `ui `ux -> -> 0 `ui `uc ]
+"510
+[e $ ! ! != ( _strcmp (2 , -> &U _temp_pass `*Cuc -> &U _temp1_pass `*Cuc -> 0 `i 232  ]
+{
+"511
+[e ( _clcd_print (2 , :s 35C -> + -> 128 `i -> 0 `i `uc ]
+"512
+[e ( _clcd_print (2 , :s 36C -> + -> 192 `i -> 0 `i `uc ]
+"515
+[e ( _strcpy (2 , &U _Pass -> &U _temp_pass `*Cuc ]
+"517
+{
+[e = _delay -> -> -> 0 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 233  ]
+[e $U 234  ]
+[e :U 233 ]
+[e ++ _delay -> -> -> 1 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 233  ]
+[e :U 234 ]
+}
+"518
+[e = _delay -> -> -> 0 `i `l `ul ]
+"519
+[e = _operation -> -> 2 `i `uc ]
+"520
+[e ( _clear_clcd ..  ]
+"521
+[e = _new_pass_index -> -> 0 `i `uc ]
+"522
+[e = _new_pass_index1 -> -> 0 `i `uc ]
+"523
+}
+[e $U 236  ]
+"524
+[e :U 232 ]
+"525
+{
+"526
+[e ( _clcd_print (2 , :s 37C -> + -> 128 `i -> 0 `i `uc ]
+"527
+[e ( _clcd_print (2 , :s 38C -> + -> 192 `i -> 0 `i `uc ]
+"528
+{
+[e = _delay -> -> -> 0 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 237  ]
+[e $U 238  ]
+[e :U 237 ]
+[e ++ _delay -> -> -> 1 `i `l `ul ]
+[e $ < _delay -> -> 200000 `l `ul 237  ]
+[e :U 238 ]
+}
+"529
+[e = _delay -> -> -> 0 `i `l `ul ]
+"531
+[e = _operation -> -> 2 `i `uc ]
+"532
+[e ( _clear_clcd ..  ]
+"533
+[e = _new_pass_index -> -> 0 `i `uc ]
+"534
+[e = _new_pass_index1 -> -> 0 `i `uc ]
+"536
+}
+[e :U 236 ]
+"537
+}
+[e :U 231 ]
+[e :U 216 ]
+"538
+[e :UE 201 ]
+}
+"544
+[v _time `uc ~T0 @X0 -> 9 `i e ]
+[i _time
+:U ..
+-> 49 `c
+-> 50 `c
+-> 58 `c
+-> 48 `c
+-> 52 `c
+-> 58 `c
+-> 50 `c
+-> 50 `c
+-> 0 `c
+..
+]
+"545
+[v _set_time_filed `ui ~T0 @X0 1 e ]
+[i _set_time_filed
+-> -> 0 `i `ui
+]
+"546
+[v _set_time `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _set_time ]
+[v _key `uc ~T0 @X0 1 r1 ]
+[f ]
+"548
+[e ( _clcd_print (2 , :s 39C -> + -> 128 `i -> 0 `i `uc ]
+"551
+[e $ ! == % _sec -> -> 2 `i `ui -> -> 0 `i `ui 241  ]
+{
+"552
+[e ( _clcd_putch (2 , -> -> 95 `ui `uc -> + -> -> 192 `i `ui _set_time_filed `uc ]
+"553
+[e ( _clcd_putch (2 , -> -> 95 `ui `uc -> + + -> -> 192 `i `ui _set_time_filed -> -> 1 `i `ui `uc ]
+"554
+}
+[e $U 242  ]
+"555
+[e :U 241 ]
+{
+"556
+[e ( _clcd_print (2 , -> &U _time `*Cuc -> + -> 192 `i -> 0 `i `uc ]
+"557
+}
+[e :U 242 ]
+"560
+[e $ ! == -> _key `i -> 62 `i 243  ]
+"561
+{
+"562
+[v _value `uc ~T0 @X0 1 a ]
+"564
+[e $ ! == _set_time_filed -> -> 0 `i `ui 244  ]
+"565
+{
+"566
+[e = _value -> + * - -> *U + &U _time * -> -> -> 0 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 1 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `uc ]
+"568
+[e ++ _value -> -> 1 `i `uc ]
+"570
+[e $ ! > -> _value `i -> 23 `i 245  ]
+"571
+[e = _value -> -> 0 `i `uc ]
+[e :U 245 ]
+"573
+[e = *U + &U _time * -> -> -> 0 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> / -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"574
+[e = *U + &U _time * -> -> -> 1 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> % -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"575
+}
+[e $U 246  ]
+"576
+[e :U 244 ]
+[e $ ! == _set_time_filed -> -> 3 `i `ui 247  ]
+"577
+{
+"578
+[e = _value -> + * - -> *U + &U _time * -> -> -> 3 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 4 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `uc ]
+"580
+[e ++ _value -> -> 1 `i `uc ]
+"582
+[e $ ! > -> _value `i -> 59 `i 248  ]
+"583
+[e = _value -> -> 0 `i `uc ]
+[e :U 248 ]
+"585
+[e = *U + &U _time * -> -> -> 3 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> / -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"586
+[e = *U + &U _time * -> -> -> 4 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> % -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"587
+}
+[e $U 249  ]
+"588
+[e :U 247 ]
+[e $ ! == _set_time_filed -> -> 6 `i `ui 250  ]
+"589
+{
+"590
+[e = _value -> + * - -> *U + &U _time * -> -> -> 6 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 7 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `uc ]
+"592
+[e ++ _value -> -> 1 `i `uc ]
+"594
+[e $ ! > -> _value `i -> 59 `i 251  ]
+"595
+[e = _value -> -> 0 `i `uc ]
+[e :U 251 ]
+"597
+[e = *U + &U _time * -> -> -> 6 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> / -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"598
+[e = *U + &U _time * -> -> -> 7 `i `ui `ux -> -> # *U &U _time `ui `ux -> + -> % -> _value `i -> 10 `i `ui -> 48 `ui `uc ]
+"599
+}
+[e :U 250 ]
+[e :U 249 ]
+[e :U 246 ]
+"600
+}
+[e $U 252  ]
+"601
+[e :U 243 ]
+[e $ ! == -> _key `i -> 61 `i 253  ]
+{
+"602
+[e $ ! == _set_time_filed -> -> 0 `i `ui 254  ]
+"603
+[e = _set_time_filed -> -> 3 `i `ui ]
+[e $U 255  ]
+"604
+[e :U 254 ]
+[e $ ! == _set_time_filed -> -> 3 `i `ui 256  ]
+"605
+[e = _set_time_filed -> -> 6 `i `ui ]
+[e $U 257  ]
+"606
+[e :U 256 ]
+"607
+[e = _set_time_filed -> -> 0 `i `ui ]
+[e :U 257 ]
+[e :U 255 ]
+"608
+}
+[e $U 258  ]
+"609
+[e :U 253 ]
+[e $ ! == -> _key `i -> 55 `i 259  ]
+{
+"610
+[v _time_value `i ~T0 @X0 1 a ]
+[e = _time_value -> 0 `i ]
+"612
+[e = _time_value -> + * - -> *U + &U _time * -> -> -> 0 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 1 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `i ]
+"613
+[e ( _write_ds1307 (2 , -> -> 2 `i `uc -> | << / _time_value -> 10 `i -> 4 `i % _time_value -> 10 `i `uc ]
+"615
+[e = _time_value -> + * - -> *U + &U _time * -> -> -> 3 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 4 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `i ]
+"616
+[e ( _write_ds1307 (2 , -> -> 1 `i `uc -> | << / _time_value -> 10 `i -> 4 `i % _time_value -> 10 `i `uc ]
+"618
+[e = _time_value -> + * - -> *U + &U _time * -> -> -> 6 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _time * -> -> -> 7 `i `ui `ux -> -> # *U &U _time `ui `ux `ui -> 48 `ui `i ]
+"619
+[e ( _write_ds1307 (2 , -> -> 0 `i `uc -> | << / _time_value -> 10 `i -> 4 `i % _time_value -> 10 `i `uc ]
+"621
+}
+[e $U 260  ]
+"622
+[e :U 259 ]
+[e $ ! == -> _key `i -> 47 `i 261  ]
+{
+"623
+[e = _operation -> -> 2 `i `uc ]
+"624
+[e ( _clear_clcd ..  ]
+"625
+}
+[e :U 261 ]
+[e :U 260 ]
+[e :U 258 ]
+[e :U 252 ]
+"630
+[e :UE 240 ]
+}
+[a 12C 67 111 114 114 101 99 116 32 80 97 115 115 119 111 114 100 0 ]
+[a 14C 87 114 111 110 103 32 80 97 115 115 119 111 114 100 0 ]
+[a 7C 71 82 0 ]
+[a 23C 35 32 84 73 77 69 32 32 32 32 32 69 86 32 83 80 0 ]
+[a 9C 32 84 73 77 69 32 32 32 32 32 69 86 32 32 83 80 0 ]
+[a 1C 79 78 0 ]
+[a 2C 71 78 0 ]
+[a 6C 71 52 0 ]
+[a 5C 71 51 0 ]
+[a 4C 71 50 0 ]
+[a 3C 71 49 0 ]
+[a 19C 87 97 105 116 32 0 ]
+[a 8C 67 32 0 ]
+[a 15C 65 116 116 101 109 112 116 115 32 114 101 109 46 32 50 32 0 ]
+[a 16C 65 116 116 101 109 112 116 115 32 114 101 109 46 32 49 32 0 ]
+[a 17C 65 116 116 101 109 112 116 115 32 114 101 109 46 32 48 32 0 ]
+[a 31C 69 110 116 101 114 32 78 101 119 32 80 97 115 115 119 111 114 100 32 32 0 ]
+[a 10C 69 110 116 101 114 32 80 97 115 115 119 111 114 100 32 32 0 ]
+[a 33C 82 101 32 69 110 116 101 114 32 78 101 119 32 80 97 115 115 32 32 32 0 ]
+[a 18C 85 83 69 82 32 66 76 79 67 75 69 68 33 32 32 32 0 ]
+[a 24C 32 32 78 111 32 69 118 101 110 116 115 32 32 32 32 32 0 ]
+[a 37C 82 101 32 69 110 116 101 114 101 100 32 80 97 115 115 32 32 32 32 32 32 32 0 ]
+[a 35C 80 97 115 115 119 111 114 100 32 105 115 32 32 32 32 32 32 32 0 ]
+[a 39C 72 72 58 77 77 58 83 83 32 32 32 32 32 32 32 32 0 ]
+[a 26C 67 108 101 97 114 105 110 103 46 46 46 46 46 46 46 46 32 32 32 32 32 32 32 32 0 ]
+[a 28C 68 111 119 110 108 111 97 100 105 110 103 46 46 46 46 46 46 46 46 32 32 32 32 32 32 32 32 0 ]
+[a 20C 32 115 101 99 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 36C 67 104 97 110 103 101 100 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 38C 105 115 32 87 114 111 110 103 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 25C 76 111 103 115 32 97 114 101 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 27C 76 111 103 115 32 97 114 101 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 11C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 13C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 21C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 22C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 32C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 34C 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 29C 35 32 84 73 77 69 32 32 32 32 69 86 32 83 80 32 84 101 115 116 32 67 111 100 101 10 13 0 ]
+[a 30C 10 13 0 ]
